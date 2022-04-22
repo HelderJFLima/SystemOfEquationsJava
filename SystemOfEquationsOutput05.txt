@@ -1,0 +1,10 @@
+
+System:
+
+2.0	-3.0	4.0	
+6.0	-9.0	15.0	
+
+
+Solution:
+
+There is no solution for the system.
