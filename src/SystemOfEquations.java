@@ -12,7 +12,7 @@ public class SystemOfEquations
 	{
 		int i, j, numVar = 0, count = 0;
 		String str = new String();
-		StringBuffer strBuf;
+		StringBuilder strBuilder;
 		ESystem syst = null;
 		
 		try
@@ -96,22 +96,22 @@ public class SystemOfEquations
 			
 			bwrt.flush();
 			
-			strBuf = new StringBuffer();
+			strBuilder = new StringBuilder();
 			
 			for(i = 0; i < numVar; i++)
 			{
 				for(j = 0 ; j < numVar + 1; j++)
-					strBuf.append(syst.getElement(i, j) + "\t");
+					strBuilder.append(syst.getElement(i, j) + "\t");
 				
-				strBuf.append("\n");
+				strBuilder.append("\n");
 				
-				str = strBuf.toString();
+				str = strBuilder.toString();
 				
 				bwrt.write(str);
 				
 				bwrt.flush();
 				
-				strBuf.delete(0, strBuf.length());
+				strBuilder.delete(0, strBuilder.length());
 			}
 			
 			str = "\n\nSolution:\n\n";
